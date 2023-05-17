@@ -15,8 +15,6 @@ jobs:
 
       - name: Pushes test file
         uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.ORG_SECRET }}
         with:
           source_file: "doc/openapi.yml"
           destination_repo: "flt3150sk/auto-merge-test"
@@ -31,6 +29,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           repository: flt3150sk/auto-merge-test
-          token: ${{ secrets.ORG_SECRET }}
           event-type: update-openapi
         if: env.GIT_DIFF
