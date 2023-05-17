@@ -20,8 +20,8 @@ jobs:
           destination_repo: "flt3150sk/auto-merge-test"
           destination_folder: ""
           destination_branch: "main"
-          user_email: "hoge@gmail.com"
-          user_name: "hogehoge"
+          user_email: "muranaka.kouske@gmail.com"
+          user_name: "flt3150sk"
           commit_message: "updated openapi"
           if: env.GIT_DIFF
 
