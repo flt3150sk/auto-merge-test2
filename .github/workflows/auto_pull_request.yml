@@ -29,5 +29,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           repository: flt3150sk/auto-merge-test
+          token: ${{ secrets.ORG_SECRET }}
           event-type: update-openapi
         if: env.GIT_DIFF
