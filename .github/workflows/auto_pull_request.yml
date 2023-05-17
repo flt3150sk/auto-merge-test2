@@ -11,14 +11,14 @@ jobs:
 
       - uses: technote-space/get-diff-action@v4.0.1
         with:
-          PATTERNS: docs/openapi.yml
+          PATTERNS: doc/openapi.yml
 
       - name: Pushes test file
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.ORG_SECRET }}
         with:
-          source_file: "docs/openapi.yml"
+          source_file: "doc/openapi.yml"
           destination_repo: "flt3150sk/auto-merge-test"
           destination_folder: ""
           destination_branch: "main"
