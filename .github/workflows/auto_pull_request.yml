@@ -23,7 +23,6 @@ jobs:
           user_email: "muranaka.kouske@gmail.com"
           user_name: "flt3150sk"
           commit_message: "updated openapi"
-          if: env.GIT_DIFF
 
       - name: Dispatch update-openapi
         uses: peter-evans/repository-dispatch@v1
@@ -31,4 +30,4 @@ jobs:
           repository: flt3150sk/auto-merge-test
           token: ${{ secrets.ORG_SECRET }}
           event-type: update-openapi
-        if: env.GIT_DIFF
+
