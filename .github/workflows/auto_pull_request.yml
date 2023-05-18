@@ -25,7 +25,6 @@ jobs:
           user_email: "hoge@gmail.com"
           user_name: "hogehoge"
           commit_message: "updated openapi"
-          if: env.GIT_DIFF
 
       - name: Dispatch update-openapi
         uses: peter-evans/repository-dispatch@v1
