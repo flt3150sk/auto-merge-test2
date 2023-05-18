@@ -21,8 +21,14 @@ jobs:
           source_file: "doc/openapi.yml"
           destination_repo: "flt3150sk/auto-merge-test"
           destination_folder: ""
-          destination_branch: "main"
+          destination_branch: "feature/update-openapi"
           user_email: "hoge@gmail.com"
-          user_name: "hogehoge"
+          user_name: "hoge"
           commit_message: "updated openapi"
 
+      - name: Dispatch update-openapi
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          repository: flt3150sk/auto-merge-test
+          token: ${{ secrets.ORG_SECRET }}
+          event-type: update-openapi
