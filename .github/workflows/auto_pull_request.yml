@@ -21,7 +21,7 @@ jobs:
           source_file: "doc/openapi.yml"
           destination_repo: "flt3150sk/auto-merge-test"
           destination_folder: ""
-          destination_branch: "feature/update-openapi"
+          destination_branch: "main"
           user_email: "hoge@gmail.com"
           user_name: "hoge"
           commit_message: "updated openapi"
