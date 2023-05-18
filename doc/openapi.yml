@@ -20,7 +20,7 @@ paths:
           required: false
           schema:
             type: integer
-            maximum: 1
+            maximum: 2
             format: int32
       responses:
         '200':
