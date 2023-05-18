@@ -2,6 +2,8 @@ name: Dispatch OpenAPI Schema Update
 on:
   push:
     branches: [main]
+    paths:
+      - doc/openapi.yml
 jobs:
   copy-file:
     runs-on: ubuntu-latest
