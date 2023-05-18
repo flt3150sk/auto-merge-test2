@@ -9,6 +9,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Create new branch in destination repository
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORG_SECRET }}
+        with:
+          branch: 'feature/update-openapi'
+          repository: 'flt3150sk/auto-merge-test'
+
       - uses: technote-space/get-diff-action@v4.0.1
         with:
           PATTERNS: doc/openapi.yml
