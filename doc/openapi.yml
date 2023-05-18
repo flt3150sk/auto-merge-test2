@@ -97,7 +97,7 @@ components:
           type: string
     Pets:
       type: array
-      maxItems: 100
+      maxItems: 1000
       items:
         $ref: "#/components/schemas/Pet"
     Error:
