@@ -13,19 +13,6 @@ jobs:
         with:
           PATTERNS: doc/openapi.yml
 
-      - name: Pushes test file
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.ORG_SECRET }}
-        with:
-          source_file: "doc/openapi.yml"
-          destination_repo: "flt3150sk/auto-merge-test"
-          destination_folder: ""
-          destination_branch: "main"
-          user_email: "muranaka.kouske@gmail.com"
-          user_name: "flt3150sk"
-          commit_message: "updated openapi"
-
       - name: Dispatch update-openapi
         uses: peter-evans/repository-dispatch@v1
         with:
